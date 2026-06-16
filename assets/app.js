@@ -37,10 +37,64 @@ function showSlide(sid) {
   window.scrollTo(0, 0);
 }
 
+function carouselMove(carousel, dir) {
+  const imgs = carousel.querySelectorAll('.carousel-frame img');
+  let idx = +carousel.dataset.idx;
+  imgs[idx].classList.remove('active');
+  idx = (idx + dir + imgs.length) % imgs.length;
+  imgs[idx].classList.add('active');
+  carousel.dataset.idx = idx;
+  carousel.nextElementSibling.textContent = (idx + 1) + ' / ' + imgs.length;
+}
+
 function copyText(btn, text) {
   navigator.clipboard.writeText(text).then(() => {
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
   });
+}
+
+// ── Dev mode (enabled via ?dev in URL) ──────────────────────────
+let devFileHandle = null;
+
+function getCleanHTML() {
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+  clone.querySelectorAll('.dev-panel').forEach(el => el.remove());
+  clone.querySelector('body').classList.remove('dev-mode');
+  return '<!DOCTYPE html>\n' + clone.outerHTML;
+}
+
+async function devSave() {
+  const btn = document.querySelector('.dev-save-btn');
+  try {
+    if (!devFileHandle) {
+      devFileHandle = await window.showSaveFilePicker({
+        suggestedName: 'index.html',
+        types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }],
+      });
+    }
+    const writable = await devFileHandle.createWritable();
+    await writable.write(getCleanHTML());
+    await writable.close();
+    btn.textContent = 'Saved ✓';
+    btn.classList.add('dev-saved');
+    setTimeout(() => { btn.textContent = 'Save'; btn.classList.remove('dev-saved'); }, 2000);
+  } catch (e) {
+    if (e.name !== 'AbortError') { btn.textContent = 'Error'; setTimeout(() => { btn.textContent = 'Save'; }, 2000); }
+  }
+}
+
+if (new URLSearchParams(window.location.search).has('dev')) {
+  document.body.classList.add('dev-mode');
+  const selectors = 'h1, h2, p, .eyebrow, .title-eyebrow, .title-h1, .title-sub, .callout, .hub-btn-title, .hub-btn-sub, code.inline';
+  document.querySelectorAll(selectors).forEach(el => {
+    el.contentEditable = 'true';
+    el.spellcheck = false;
+  });
+  const panel = document.createElement('div');
+  panel.className = 'dev-panel';
+  panel.innerHTML = '<span class="dev-badge">DEV</span><button class="dev-save-btn" onclick="devSave()">Save</button>';
+  document.body.appendChild(panel);
 }

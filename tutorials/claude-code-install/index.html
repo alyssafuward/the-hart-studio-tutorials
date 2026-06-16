@@ -1,96 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude Code Installation &amp; Setup — HART Studio Tutorials</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
-<body>
-<button class="toggle-btn open" onclick="toggleSidebar()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></button>
+<body class="">
+<button class="toggle-btn open" onclick="toggleSidebar()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg></button>
 <nav class="sidebar">
   <div class="sidebar-header">
     <div class="sidebar-brand">HART Studio</div>
     <div class="sidebar-sub">Tutorials</div>
   </div>
-  <ul class="toc-list"><li class="toc-home" onclick="window.location.href='../../'">&#8962; Home</li><li class="toc-hub" onclick="showSlide('hub')">&#9654; Claude Code</li><li class="toc-section" id="sec-mac" onclick="toggleSection('mac')">
-          <span class="toc-section-label">&#63743; Install on Mac</span>
-          <span class="toc-chevron" id="chev-mac">&#8250;</span>
+  <ul class="toc-list"><li class="toc-home" onclick="window.location.href='../../'">⌂ Home</li><li class="toc-hub" onclick="showSlide('hub')">▶ Claude Code</li><li class="toc-section" id="sec-mac" onclick="toggleSection('mac')">
+          <span class="toc-section-label"> Install on Mac</span>
+          <span class="toc-chevron" id="chev-mac">›</span>
         </li>
         <ul class="toc-sub-list" id="sub-mac"><li class="toc-sub-item" id="toc-mac-1" onclick="showSlide('mac-1')"><span class="toc-sub-num">1</span><span class="toc-sub-label">Open Terminal</span></li><li class="toc-sub-item" id="toc-mac-2" onclick="showSlide('mac-2')"><span class="toc-sub-num">2</span><span class="toc-sub-label">Run the install command</span></li><li class="toc-sub-item" id="toc-mac-3" onclick="showSlide('mac-3')"><span class="toc-sub-num">3</span><span class="toc-sub-label">Confirm the install</span></li><li class="toc-sub-item" id="toc-mac-4" onclick="showSlide('mac-4')"><span class="toc-sub-num">4</span><span class="toc-sub-label">Fix the PATH (if needed)</span></li></ul><li class="toc-section" id="sec-win" onclick="toggleSection('win')">
-          <span class="toc-section-label">&#x229E; Install on Windows</span>
-          <span class="toc-chevron" id="chev-win">&#8250;</span>
+          <span class="toc-section-label">⊞ Install on Windows</span>
+          <span class="toc-chevron" id="chev-win">›</span>
         </li>
         <ul class="toc-sub-list" id="sub-win"><li class="toc-sub-item" id="toc-win-1" onclick="showSlide('win-1')"><span class="toc-sub-num">1</span><span class="toc-sub-label">Open PowerShell</span></li><li class="toc-sub-item" id="toc-win-2" onclick="showSlide('win-2')"><span class="toc-sub-num">2</span><span class="toc-sub-label">Run the install command</span></li><li class="toc-sub-item" id="toc-win-3" onclick="showSlide('win-3')"><span class="toc-sub-num">3</span><span class="toc-sub-label">Confirm the install</span></li><li class="toc-sub-item" id="toc-win-4" onclick="showSlide('win-4')"><span class="toc-sub-num">4</span><span class="toc-sub-label">Check if claude works</span></li><li class="toc-sub-item" id="toc-win-5" onclick="showSlide('win-5')"><span class="toc-sub-num">5</span><span class="toc-sub-label">Open PowerShell as Administrator</span></li><li class="toc-sub-item" id="toc-win-6" onclick="showSlide('win-6')"><span class="toc-sub-num">6</span><span class="toc-sub-label">Fix the PATH</span></li><li class="toc-sub-item" id="toc-win-7" onclick="showSlide('win-7')"><span class="toc-sub-num">7</span><span class="toc-sub-label">Confirm the PATH fix</span></li></ul><li class="toc-section" id="sec-setup" onclick="toggleSection('setup')">
-          <span class="toc-section-label">&#9881; Claude Code Setup</span>
-          <span class="toc-chevron" id="chev-setup">&#8250;</span>
+          <span class="toc-section-label">⚙ Claude Code Setup</span>
+          <span class="toc-chevron" id="chev-setup">›</span>
         </li>
         <ul class="toc-sub-list" id="sub-setup"><li class="toc-sub-item" id="toc-setup-1" onclick="showSlide('setup-1')"><span class="toc-sub-num">1</span><span class="toc-sub-label">Launch Claude Code</span></li><li class="toc-sub-item" id="toc-setup-2" onclick="showSlide('setup-2')"><span class="toc-sub-num">2</span><span class="toc-sub-label">Authorize in your browser</span></li><li class="toc-sub-item" id="toc-setup-3" onclick="showSlide('setup-3')"><span class="toc-sub-num">3</span><span class="toc-sub-label">Allow network access</span></li><li class="toc-sub-item" id="toc-setup-4" onclick="showSlide('setup-4')"><span class="toc-sub-num">4</span><span class="toc-sub-label">Login confirmed in browser</span></li><li class="toc-sub-item" id="toc-setup-5" onclick="showSlide('setup-5')"><span class="toc-sub-num">5</span><span class="toc-sub-label">Login confirmed in terminal</span></li><li class="toc-sub-item" id="toc-setup-6" onclick="showSlide('setup-6')"><span class="toc-sub-num">6</span><span class="toc-sub-label">Read the security notes</span></li><li class="toc-sub-item" id="toc-setup-7" onclick="showSlide('setup-7')"><span class="toc-sub-num">7</span><span class="toc-sub-label">Choose your theme</span></li><li class="toc-sub-item" id="toc-setup-8" onclick="showSlide('setup-8')"><span class="toc-sub-num">8</span><span class="toc-sub-label">Light mode option</span></li><li class="toc-sub-item" id="toc-setup-9" onclick="showSlide('setup-9')"><span class="toc-sub-num">9</span><span class="toc-sub-label">Terminal setup</span></li><li class="toc-sub-item" id="toc-setup-10" onclick="showSlide('setup-10')"><span class="toc-sub-num">10</span><span class="toc-sub-label">Trust this folder</span></li><li class="toc-sub-item" id="toc-setup-11" onclick="showSlide('setup-11')"><span class="toc-sub-num">11</span><span class="toc-sub-label">Fullscreen renderer</span></li><li class="toc-sub-item" id="toc-setup-12" onclick="showSlide('setup-12')"><span class="toc-sub-num">12</span><span class="toc-sub-label">Permission popups</span></li><li class="toc-sub-item" id="toc-setup-13" onclick="showSlide('setup-13')"><span class="toc-sub-num">13</span><span class="toc-sub-label">The main interface</span></li><li class="toc-sub-item" id="toc-setup-14" onclick="showSlide('setup-14')"><span class="toc-sub-num">14</span><span class="toc-sub-label">Claude is thinking</span></li><li class="toc-sub-item" id="toc-setup-15" onclick="showSlide('setup-15')"><span class="toc-sub-num">15</span><span class="toc-sub-label">Claude responds — you are ready!</span></li></ul></ul>
 </nav>
 <div class="main">
 <div class="slide active" id="slide-hub">
   <div class="title-slide">
-    <div class="breadcrumb" onclick="window.location.href='../../'">&#8962; Home &nbsp;&#8250;&nbsp; Claude Code</div>
-    <div class="title-eyebrow">Installation &amp; Setup Guide</div>
-    <h1 class="title-h1">Claude Code<br>in Terminal</h1>
-    <p class="title-sub">Get Claude Code running on your computer — no technical background required. Choose your operating system to get started.</p>
+    <div class="breadcrumb" onclick="window.location.href='../../'">⌂ Home &nbsp;›&nbsp; Claude Code</div>
+    <div class="title-eyebrow" spellcheck="false">Installation &amp; Setup Guide</div>
+    <h1 class="title-h1" spellcheck="false">Claude Code<br>in Terminal</h1>
+    <p class="title-sub" spellcheck="false">Get Claude Code running on your computer — no technical background required. Choose your operating system to get started.</p>
     <div class="hub-btns">
       <div class="hub-btn" onclick="showSlide('mac-1')">
-        <div class="hub-btn-icon">&#63743;</div>
-        <div class="hub-btn-title">Install on Mac</div>
-        <div class="hub-btn-sub">4 steps · curl install</div>
+        <div class="hub-btn-icon"></div>
+        <div class="hub-btn-title" spellcheck="false">Install on Mac</div>
+        <div class="hub-btn-sub" spellcheck="false">4 steps · curl install</div>
       </div>
       <div class="hub-btn" onclick="showSlide('win-1')">
-        <div class="hub-btn-icon">&#x229E;</div>
-        <div class="hub-btn-title">Install on Windows</div>
-        <div class="hub-btn-sub">7 steps · PowerShell</div>
+        <div class="hub-btn-icon">⊞</div>
+        <div class="hub-btn-title" spellcheck="false">Install on Windows</div>
+        <div class="hub-btn-sub" spellcheck="false">7 steps · PowerShell</div>
       </div>
       <div class="hub-btn" onclick="showSlide('setup-1')">
-        <div class="hub-btn-icon">&#9881;</div>
-        <div class="hub-btn-title">Claude Code Setup</div>
-        <div class="hub-btn-sub">15 steps · all platforms</div>
+        <div class="hub-btn-icon">⚙</div>
+        <div class="hub-btn-title" spellcheck="false">Claude Code Setup</div>
+        <div class="hub-btn-sub" spellcheck="false">15 steps · all platforms</div>
       </div>
     </div>
   </div>
 </div><div class="slide" id="slide-mac-1">
-  <div class="eyebrow">&#63743; Install on Mac &nbsp;·&nbsp; Step 1 of 4</div>
-  <h2>Open Terminal</h2>
+  <div class="eyebrow" spellcheck="false"> Install on Mac &nbsp;·&nbsp; Step 1 of 4</div>
+  <h2 spellcheck="false">Open Terminal</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/mac-1.png" alt=""><p>Press <strong>&#8984; + Space</strong> to open Spotlight, type <em>Terminal</em>, and press Enter. It appears at the top of results with a black icon.</p><div class="callout">If you see iTerm in the list, that also works — it is just an alternative Terminal app.</div>
+  <img class="screenshot" src="../../assets/images/mac-1.png" alt=""><p spellcheck="false">Press <strong>⌘ + Space</strong> to open Spotlight, type <em>Terminal</em>, and press Enter. It appears at the top of results with a black icon.</p><div class="callout" spellcheck="false">If you see iTerm in the list, that also works — it is just an alternative Terminal app.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('hub')">&#8592; Back</button><button class="primary" onclick="showSlide('mac-2')">Next &#8594;</button><span class="progress">1 / 4</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('hub')">← Back</button><button class="primary" onclick="showSlide('mac-2')">Next →</button><span class="progress">1 / 4</span></div>
 </div><div class="slide" id="slide-mac-2">
-  <div class="eyebrow">&#63743; Install on Mac &nbsp;·&nbsp; Step 2 of 4</div>
-  <h2>Run the install command</h2>
+  <div class="eyebrow" spellcheck="false"> Install on Mac &nbsp;·&nbsp; Step 2 of 4</div>
+  <h2 spellcheck="false">Run the install command</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/mac-2.png" alt=""><p>Copy and paste the command below into Terminal and press <strong>Enter</strong>. This downloads and installs Claude Code in one step.</p><div class="copy-block"><code>curl -fsSL https://claude.ai/install.sh | bash</code><button class="copy-btn" onclick="copyText(this,`curl -fsSL https://claude.ai/install.sh | bash`)">Copy</button></div><div class="callout">Think of this like clicking Download on a website, except through Terminal instead of a browser.</div>
+  <img class="screenshot" src="../../assets/images/mac-2.png" alt=""><p spellcheck="false">Copy and paste the command below into Terminal and press <strong>Enter</strong>. This downloads and installs Claude Code in one step.</p><div class="copy-block"><code>curl -fsSL https://claude.ai/install.sh | bash</code><button class="copy-btn" onclick="copyText(this,`curl -fsSL https://claude.ai/install.sh | bash`)">Copy</button></div><div class="callout" spellcheck="false">Think of this like clicking Download on a website, except through Terminal instead of a browser.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('mac-1')">&#8592; Back</button><button class="primary" onclick="showSlide('mac-3')">Next &#8594;</button><span class="progress">2 / 4</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('mac-1')">← Back</button><button class="primary" onclick="showSlide('mac-3')">Next →</button><span class="progress">2 / 4</span></div>
 </div><div class="slide" id="slide-mac-3">
-  <div class="eyebrow">&#63743; Install on Mac &nbsp;·&nbsp; Step 3 of 4</div>
-  <h2>Confirm the install</h2>
+  <div class="eyebrow" spellcheck="false"> Install on Mac &nbsp;·&nbsp; Step 3 of 4</div>
+  <h2 spellcheck="false">Confirm the install</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/mac-3.png" alt=""><p>You will see <strong>Claude Code successfully installed!</strong> in green. You may also see a yellow PATH warning — if so, go to the next step.</p><div class="callout">If you did not see the warning, skip the next step. You are already good.</div>
+  <img class="screenshot" src="../../assets/images/mac-3.png" alt=""><p spellcheck="false">You will see <strong>Claude Code successfully installed!</strong> in green. You may also see a yellow PATH warning — if so, go to the next step.</p><div class="callout" spellcheck="false">If you did not see the warning, skip the next step. You're all good.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('mac-2')">&#8592; Back</button><button class="primary" onclick="showSlide('mac-4')">Next &#8594;</button><span class="progress">3 / 4</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('mac-2')">← Back</button><button class="primary" onclick="showSlide('mac-4')">Next →</button><span class="progress">3 / 4</span></div>
 </div><div class="slide" id="slide-mac-4">
-  <div class="eyebrow">&#63743; Install on Mac &nbsp;·&nbsp; Step 4 of 4</div>
-  <h2>Fix the PATH (if needed)</h2>
+  <div class="eyebrow" spellcheck="false"> Install on Mac &nbsp;·&nbsp; Step 4 of 4</div>
+  <h2 spellcheck="false">Fix the PATH (if needed)</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/mac-4.png" alt=""><p>If you saw the PATH warning, paste this command into Terminal and press Enter. It runs silently — no output means it worked.</p><div class="copy-block"><code>echo 'export PATH=&quot;$HOME/.local/bin:$PATH&quot;' >> ~/.zshrc &amp;&amp; source ~/.zshrc</code><button class="copy-btn" onclick="copyText(this,`echo \'export PATH="$HOME/.local/bin:$PATH"\' >> ~/.zshrc && source ~/.zshrc`)">Copy</button></div><div class="callout">After running that, open a new Terminal window before continuing.</div>
-  <div class="section-btns"><button class="section-btn" onclick="showSlide('win-1')">&#x229E; Windows Install</button><button class="section-btn" onclick="showSlide('setup-1')">&#9881; Claude Code Setup</button></div>
-  <div class="nav"><button class="ghost" onclick="showSlide('mac-3')">&#8592; Back</button><span class="progress">4 / 4</span></div>
+  <img class="screenshot" src="../../assets/images/mac-4.png" alt=""><p spellcheck="false">If you saw the PATH warning, paste this command into Terminal and press Enter. It runs silently. If you don't get any output, it means it worked.</p><div class="copy-block"><code>echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</code><button class="copy-btn" onclick="copyText(this,`echo \'export PATH=" $home="" .local="" bin:$path"\'="">&gt; ~/.zshrc &amp;&amp; source ~/.zshrc`)"&gt;Copy</button></div><div class="callout" spellcheck="false">After running that, open a new Terminal window before continuing.</div>
+  <div class="section-btns"><button class="section-btn" onclick="showSlide('win-1')">⊞ Windows Install</button><button class="section-btn" onclick="showSlide('setup-1')">⚙ Claude Code Setup</button></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('mac-3')">← Back</button><span class="progress">4 / 4</span></div>
 </div><div class="slide" id="slide-win-1">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 1 of 7</div>
-  <h2>Open PowerShell</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 1 of 7</div>
+  <h2 spellcheck="false">Open PowerShell</h2>
   <hr>
   <div class="win-start-search">
-  <div class="win-search-bar">&#128269;&nbsp; powershell</div>
+  <div class="win-search-bar">🔍&nbsp; powershell</div>
   <div class="win-search-results">
     <div class="win-search-header">Best match</div>
     <div class="win-search-item">
-      <div class="win-search-icon">&#x1F5A5;</div>
+      <div class="win-search-icon">🖥</div>
       <div><div class="win-search-name">Windows PowerShell</div><div class="win-search-sub">App</div></div>
       <div class="win-search-actions">
         <div class="win-action-item">Open</div>
@@ -98,47 +97,47 @@
       </div>
     </div>
   </div>
-</div><p>Press the <strong>Windows key</strong>, type <em>PowerShell</em>, and press Enter to open a regular PowerShell window. You do not need to run as Administrator yet.</p><div class="callout">You will see a "Run as administrator" option if you right-click — ignore it for now. You only need it later if you hit a PATH error.</div>
+</div><p spellcheck="false">Press the <strong>Windows key</strong>, type <em>PowerShell</em>, and press Enter to open a regular PowerShell window. You do not need to run as Administrator yet.</p><div class="callout" spellcheck="false">You will see a "Run as administrator" option if you right-click — ignore it for now. You only need it later if you hit a PATH error.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('hub')">&#8592; Back</button><button class="primary" onclick="showSlide('win-2')">Next &#8594;</button><span class="progress">1 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('hub')">← Back</button><button class="primary" onclick="showSlide('win-2')">Next →</button><span class="progress">1 / 7</span></div>
 </div><div class="slide" id="slide-win-2">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 2 of 7</div>
-  <h2>Run the install command</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 2 of 7</div>
+  <h2 spellcheck="false">Run the install command</h2>
   <hr>
-  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">&#9472; &#9633; &#10005;</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd</span></div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Setting up Claude Code...</div><div style="color:#fff">&nbsp;</div><div style="color:#4ec94e">&#10003; Claude Code successfully installed!</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Version: <span style="color:#f97316">2.1.177</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff">&#9651; <span style="color:#f97316">Setup notes:</span></div><div style="color:#ccc">&nbsp;&nbsp;&#8226; C:\Users\YourName\.local\bin is not in your PATH.</div><div style="color:#ccc">&nbsp;&nbsp;&nbsp;&nbsp;Add it via: System Properties &#8594; Environment Variables &#8594; Edit User PATH</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">&#9989; Installation complete!</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p>Copy and paste the command below into PowerShell and press <strong>Enter</strong>.</p><div class="copy-block"><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd</code><button class="copy-btn" onclick="copyText(this,`curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd`)">Copy</button></div><div class="callout">Think of this like clicking Download on a website, except through PowerShell instead of a browser.</div>
+  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">─ □ ✕</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd</span></div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Setting up Claude Code...</div><div style="color:#fff">&nbsp;</div><div style="color:#4ec94e">✓ Claude Code successfully installed!</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Version: <span style="color:#f97316">2.1.177</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff">△ <span style="color:#f97316">Setup notes:</span></div><div style="color:#ccc">&nbsp;&nbsp;• C:\Users\YourName\.local\bin is not in your PATH.</div><div style="color:#ccc">&nbsp;&nbsp;&nbsp;&nbsp;Add it via: System Properties → Environment Variables → Edit User PATH</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">✅ Installation complete!</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p spellcheck="false">Copy and paste the command below into PowerShell and press <strong>Enter</strong>.</p><div class="copy-block"><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd</code><button class="copy-btn" onclick="copyText(this,`curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd`)">Copy</button></div><div class="callout" spellcheck="false">Think of this like clicking Download on a website, except through PowerShell instead of a browser.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('win-1')">&#8592; Back</button><button class="primary" onclick="showSlide('win-3')">Next &#8594;</button><span class="progress">2 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-1')">← Back</button><button class="primary" onclick="showSlide('win-3')">Next →</button><span class="progress">2 / 7</span></div>
 </div><div class="slide" id="slide-win-3">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 3 of 7</div>
-  <h2>Confirm the install</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 3 of 7</div>
+  <h2 spellcheck="false">Confirm the install</h2>
   <hr>
-  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">&#9472; &#9633; &#10005;</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd</span></div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Setting up Claude Code...</div><div style="color:#fff">&nbsp;</div><div style="color:#4ec94e">&#10003; Claude Code successfully installed!</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Version: <span style="color:#f97316">2.1.177</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff">&#9651; <span style="color:#f97316">Setup notes:</span></div><div style="color:#ccc">&nbsp;&nbsp;&#8226; C:\Users\YourName\.local\bin is not in your PATH.</div><div style="color:#ccc">&nbsp;&nbsp;&nbsp;&nbsp;Add it via: System Properties &#8594; Environment Variables &#8594; Edit User PATH</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">&#9989; Installation complete!</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p>You will see <strong>Claude Code successfully installed!</strong> You may also see a PATH warning — if so, continue to the next step.</p><div class="callout">The PATH error is very common on Windows. The next slides walk you through the fix.</div>
+  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">─ □ ✕</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd</span></div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Setting up Claude Code...</div><div style="color:#fff">&nbsp;</div><div style="color:#4ec94e">✓ Claude Code successfully installed!</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">Version: <span style="color:#f97316">2.1.177</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff">△ <span style="color:#f97316">Setup notes:</span></div><div style="color:#ccc">&nbsp;&nbsp;• C:\Users\YourName\.local\bin is not in your PATH.</div><div style="color:#ccc">&nbsp;&nbsp;&nbsp;&nbsp;Add it via: System Properties → Environment Variables → Edit User PATH</div><div style="color:#fff">&nbsp;</div><div style="color:#ccc">✅ Installation complete!</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p spellcheck="false">You will see <strong>Claude Code successfully installed!</strong> You may also see a PATH warning — if so, continue to the next step.</p><div class="callout" spellcheck="false">The PATH error is very common on Windows. The next slides walk you through the fix.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('win-2')">&#8592; Back</button><button class="primary" onclick="showSlide('win-4')">Next &#8594;</button><span class="progress">3 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-2')">← Back</button><button class="primary" onclick="showSlide('win-4')">Next →</button><span class="progress">3 / 7</span></div>
 </div><div class="slide" id="slide-win-4">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 4 of 7</div>
-  <h2>Check if claude works</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 4 of 7</div>
+  <h2 spellcheck="false">Check if claude works</h2>
   <hr>
-  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">&#9472; &#9633; &#10005;</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">claude</span></div><div style="color:#fff">&nbsp;</div><div style="color:#f87171">claude : The term 'claude' is not recognized as the name of a cmdlet,</div><div style="color:#f87171">function, script file, or operable program.</div><div style="color:#f97316">At line:1 char:1</div><div style="color:#f97316">+ claude</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p>Open a new PowerShell window and type <code class="inline">claude</code>. If you see an error like this, your PATH is not set yet and needs to be fixed. Continue to the next step.</p><div class="callout">If claude launched successfully, skip ahead to the Claude Code Setup section.</div>
+  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell</span><span class="win-controls">─ □ ✕</span></div><div class="win-body"><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">claude</span></div><div style="color:#fff">&nbsp;</div><div style="color:#f87171">claude : The term 'claude' is not recognized as the name of a cmdlet,</div><div style="color:#f87171">function, script file, or operable program.</div><div style="color:#f97316">At line:1 char:1</div><div style="color:#f97316">+ claude</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p spellcheck="false">Open a new PowerShell window and type <code class="inline" spellcheck="false">claude</code>. If you see an error like this, your PATH is not set yet and needs to be fixed. Continue to the next step.</p><div class="callout" spellcheck="false">If claude launched successfully, skip ahead to the Claude Code Setup section.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('win-3')">&#8592; Back</button><button class="primary" onclick="showSlide('win-5')">Next &#8594;</button><span class="progress">4 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-3')">← Back</button><button class="primary" onclick="showSlide('win-5')">Next →</button><span class="progress">4 / 7</span></div>
 </div><div class="slide" id="slide-win-5">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 5 of 7</div>
-  <h2>Open PowerShell as Administrator</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 5 of 7</div>
+  <h2 spellcheck="false">Open PowerShell as Administrator</h2>
   <hr>
-  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell (Administrator)</span><span class="win-controls">&#9472; &#9633; &#10005;</span></div><div class="win-body"><div style="color:#5fd5f9">Windows PowerShell</div><div style="color:#aaa">Copyright (C) Microsoft Corporation. All rights reserved.</div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p>Open PowerShell as Administrator: press the Windows key, type <em>PowerShell</em>, then <strong>right-click</strong> and choose <strong>Run as administrator</strong>. Click Yes when Windows asks for permission.</p><div class="callout">This elevated window is only needed to fix the PATH. Once done you will close it and never need it again for Claude Code.</div>
+  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell (Administrator)</span><span class="win-controls">─ □ ✕</span></div><div class="win-body"><div style="color:#5fd5f9">Windows PowerShell</div><div style="color:#aaa">Copyright (C) Microsoft Corporation. All rights reserved.</div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p spellcheck="false">Open PowerShell as Administrator: press the Windows key, type <em>PowerShell</em>, then <strong>right-click</strong> and choose <strong>Run as administrator</strong>. Click Yes when Windows asks for permission.</p><div class="callout" spellcheck="false">This elevated window is only needed to fix the PATH. Once done you will close it and never need it again for Claude Code.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('win-4')">&#8592; Back</button><button class="primary" onclick="showSlide('win-6')">Next &#8594;</button><span class="progress">5 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-4')">← Back</button><button class="primary" onclick="showSlide('win-6')">Next →</button><span class="progress">5 / 7</span></div>
 </div><div class="slide" id="slide-win-6">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 6 of 7</div>
-  <h2>Fix the PATH</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 6 of 7</div>
+  <h2 spellcheck="false">Fix the PATH</h2>
   <hr>
-  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell (Administrator)</span><span class="win-controls">&#9472; &#9633; &#10005;</span></div><div class="win-body"><div style="color:#5fd5f9">Windows PowerShell</div><div style="color:#aaa">Copyright (C) Microsoft Corporation. All rights reserved.</div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p>In the Administrator PowerShell, paste this command and press Enter. Replace <strong>YourName</strong> with your actual Windows username.</p><div class="copy-block"><code>[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</code><button class="copy-btn" onclick="copyText(this,`[Environment]::SetEnvironmentVariable(\'Path\', $env:Path + \';C:\\Users\\YourName\\.local\\bin\', \'User\')`)">Copy</button></div><div class="callout">It runs silently — no output means it worked. Close this Administrator window when done, then open a regular PowerShell to continue.</div>
+  <div class="win-terminal"><div class="win-titlebar"><span class="win-title">Windows PowerShell (Administrator)</span><span class="win-controls">─ □ ✕</span></div><div class="win-body"><div style="color:#5fd5f9">Windows PowerShell</div><div style="color:#aaa">Copyright (C) Microsoft Corporation. All rights reserved.</div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff">[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</span></div><div style="color:#fff">&nbsp;</div><div style="color:#fff"><span style="color:#5fd5f9">PS</span> <span style="color:#fff">C:\Users\YourName&gt;</span> <span style="color:#fff"></span></div></div></div><p spellcheck="false">In the Administrator PowerShell, paste this command and press Enter. Replace <strong>YourName</strong> with your actual Windows username.</p><div class="copy-block"><code>[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Users\YourName\.local\bin', 'User')</code><button class="copy-btn" onclick="copyText(this,`[Environment]::SetEnvironmentVariable(\'Path\', $env:Path + \';C:\\Users\\YourName\\.local\\bin\', \'User\')`)">Copy</button></div><div class="callout" spellcheck="false">It runs silently — no output means it worked. Close this Administrator window when done, then open a regular PowerShell to continue.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('win-5')">&#8592; Back</button><button class="primary" onclick="showSlide('win-7')">Next &#8594;</button><span class="progress">6 / 7</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-5')">← Back</button><button class="primary" onclick="showSlide('win-7')">Next →</button><span class="progress">6 / 7</span></div>
 </div><div class="slide" id="slide-win-7">
-  <div class="eyebrow">&#x229E; Install on Windows &nbsp;·&nbsp; Step 7 of 7</div>
-  <h2>Confirm the PATH fix</h2>
+  <div class="eyebrow" spellcheck="false">⊞ Install on Windows &nbsp;·&nbsp; Step 7 of 7</div>
+  <h2 spellcheck="false">Confirm the PATH fix</h2>
   <hr>
   <div class="win-dialog">
   <div class="win-dialog-title">Environment Variables</div>
@@ -146,122 +145,122 @@
     <div class="win-section-label">User variables for YourName</div>
     <div class="win-listbox">
       <div class="win-listitem">OneDrive &nbsp;&nbsp; C:\Users\YourName\OneDrive</div>
-      <div class="win-listitem selected">PATH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...;C:\Users\YourName\.local\bin &#9998;</div>
+      <div class="win-listitem selected">PATH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...;C:\Users\YourName\.local\bin ✎</div>
       <div class="win-listitem">TEMP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\Users\YourName\AppData\Local\Temp</div>
     </div>
     <div class="win-btn-row"><div class="win-btn">New</div><div class="win-btn win-btn-primary">Edit</div><div class="win-btn">Delete</div></div>
     <div class="win-btn-row" style="margin-top:14px;justify-content:flex-end"><div class="win-btn win-btn-primary">OK</div><div class="win-btn">Cancel</div></div>
   </div>
-</div><p>If you want to verify it worked, search for <em>Environment Variables</em> in the Start menu, open it, and look for your PATH entry under User variables. You should see the <code class="inline">.local\bin</code> path added at the end.</p><div class="callout">You can also just open a new regular PowerShell and type claude — if it launches, you are good.</div>
-  <div class="section-btns"><button class="section-btn" onclick="showSlide('mac-1')">&#63743; Mac Install</button><button class="section-btn" onclick="showSlide('setup-1')">&#9881; Claude Code Setup</button></div>
-  <div class="nav"><button class="ghost" onclick="showSlide('win-6')">&#8592; Back</button><span class="progress">7 / 7</span></div>
+</div><p spellcheck="false">If you want to verify it worked, search for <em>Environment Variables</em> in the Start menu, open it, and look for your PATH entry under User variables. You should see the <code class="inline" spellcheck="false">.local\bin</code> path added at the end.</p><div class="callout" spellcheck="false">You can also just open a new regular PowerShell and type claude — if it launches, you are good.</div>
+  <div class="section-btns"><button class="section-btn" onclick="showSlide('mac-1')"> Mac Install</button><button class="section-btn" onclick="showSlide('setup-1')">⚙ Claude Code Setup</button></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('win-6')">← Back</button><span class="progress">7 / 7</span></div>
 </div><div class="slide" id="slide-setup-1">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 1 of 15</div>
-  <h2>Launch Claude Code</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 1 of 15</div>
+  <h2 spellcheck="false">Launch Claude Code</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-1.png" alt=""><p>Type <code class="inline">claude</code> in your terminal and press Enter. Claude Code will start and ask how you want to log in.</p><p>Choose <strong>option 1: Claude account with subscription</strong> to connect to your existing claude.ai account.</p><div class="callout">If you have a Pro, Max, Team, or Enterprise Claude subscription, option 1 is the right choice.</div>
+  <img class="screenshot" src="../../assets/images/setup-1.png" alt=""><p spellcheck="false">Type <code class="inline" spellcheck="false">claude</code> in your terminal and press Enter. Claude Code will start and ask how you want to log in.</p><p spellcheck="false">Choose <strong>option 1: Claude account with subscription</strong> to connect to your existing claude.ai account.</p><div class="callout" spellcheck="false">If you have a Pro, Max, Team, or Enterprise Claude subscription, option 1 is the right choice.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('hub')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-2')">Next &#8594;</button><span class="progress">1 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('hub')">← Back</button><button class="primary" onclick="showSlide('setup-2')">Next →</button><span class="progress">1 / 15</span></div>
 </div><div class="slide" id="slide-setup-2">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 2 of 15</div>
-  <h2>Authorize in your browser</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 2 of 15</div>
+  <h2 spellcheck="false">Authorize in your browser</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-2.png" alt=""><p>A browser window will open asking you to authorize Claude Code. This is the same kind of permission screen you see when logging in with Google. Click <strong>Authorize</strong>.</p><div class="callout">This is safe — you are just linking your existing Claude account to the terminal version.</div>
+  <img class="screenshot" src="../../assets/images/setup-2.png" alt=""><p spellcheck="false">A browser window will open asking you to authorize Claude Code. This is the same kind of permission screen you see when logging in with Google. Click <strong>Authorize</strong>.</p><div class="callout" spellcheck="false">This is safe — you are just linking your existing Claude account to the terminal version.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-1')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-3')">Next &#8594;</button><span class="progress">2 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-1')">← Back</button><button class="primary" onclick="showSlide('setup-3')">Next →</button><span class="progress">2 / 15</span></div>
 </div><div class="slide" id="slide-setup-3">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 3 of 15</div>
-  <h2>Allow network access</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 3 of 15</div>
+  <h2 spellcheck="false">Allow network access</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-3.png" alt=""><p>Your computer may show a security dialog asking if your terminal can access the network. Click <strong>Allow</strong>. Claude Code needs this to communicate with Anthropic.</p><div class="callout">On Windows this may look different but works the same way.</div>
+  <img class="screenshot" src="../../assets/images/setup-3.png" alt=""><p spellcheck="false">Your computer may show a security dialog asking if your terminal can access the network. Click <strong>Allow</strong>. Claude Code needs this to communicate with Anthropic.</p><div class="callout" spellcheck="false">On Windows this may look different but works the same way.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-2')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-4')">Next &#8594;</button><span class="progress">3 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-2')">← Back</button><button class="primary" onclick="showSlide('setup-4')">Next →</button><span class="progress">3 / 15</span></div>
 </div><div class="slide" id="slide-setup-4">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 4 of 15</div>
-  <h2>Login confirmed in browser</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 4 of 15</div>
+  <h2 spellcheck="false">Login confirmed in browser</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-4.png" alt=""><p>You will see this page in your browser. It means the login worked. Close that tab and go back to your terminal.</p>
+  <img class="screenshot" src="../../assets/images/setup-4.png" alt=""><p spellcheck="false">You will see this page in your browser. It means the login worked. Close that tab and go back to your terminal.</p>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-3')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-5')">Next &#8594;</button><span class="progress">4 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-3')">← Back</button><button class="primary" onclick="showSlide('setup-5')">Next →</button><span class="progress">4 / 15</span></div>
 </div><div class="slide" id="slide-setup-5">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 5 of 15</div>
-  <h2>Login confirmed in terminal</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 5 of 15</div>
+  <h2 spellcheck="false">Login confirmed in terminal</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-5.png" alt=""><p>Back in your terminal, you will see your email address with <strong>Login successful.</strong> Press <strong>Enter</strong> to continue.</p>
+  <img class="screenshot" src="../../assets/images/setup-5.png" alt=""><p spellcheck="false">Back in your terminal, you will see your email address with <strong>Login successful.</strong> Press <strong>Enter</strong> to continue.</p>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-4')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-6')">Next &#8594;</button><span class="progress">5 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-4')">← Back</button><button class="primary" onclick="showSlide('setup-6')">Next →</button><span class="progress">5 / 15</span></div>
 </div><div class="slide" id="slide-setup-6">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 6 of 15</div>
-  <h2>Read the security notes</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 6 of 15</div>
+  <h2 spellcheck="false">Read the security notes</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-6.png" alt=""><p>Claude Code shows two reminders:</p><p><strong>1. Claude can make mistakes.</strong> Always review what it does, especially when it touches files.</p><p><strong>2. Only use it with code you trust.</strong> Do not point it at unknown files from the internet.</p><p>Press <strong>Enter</strong> to continue.</p><div class="callout">Worth reading once and keeping in mind.</div>
+  <img class="screenshot" src="../../assets/images/setup-6.png" alt=""><p spellcheck="false">Claude Code shows two reminders:</p><p spellcheck="false"><strong>1. Claude can make mistakes.</strong> Always review what it does, especially when it touches files.</p><p spellcheck="false"><strong>2. Only use it with code you trust.</strong> Do not point it at unknown files from the internet.</p><p spellcheck="false">Press <strong>Enter</strong> to continue.</p><div class="callout" spellcheck="false">Worth reading once and keeping in mind.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-5')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-7')">Next &#8594;</button><span class="progress">6 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-5')">← Back</button><button class="primary" onclick="showSlide('setup-7')">Next →</button><span class="progress">6 / 15</span></div>
 </div><div class="slide" id="slide-setup-7">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 7 of 15</div>
-  <h2>Choose your theme</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 7 of 15</div>
+  <h2 spellcheck="false">Choose your theme</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-7.png" alt=""><p>Claude Code asks you to pick a visual theme. Use your <strong>arrow keys</strong> to scroll — the preview at the bottom updates as you go.</p><p>If your terminal has a dark background, choose <strong>Dark mode</strong>. If it is white or light gray, see the next slide.</p><div class="callout">You can change your theme any time by typing /theme inside Claude Code.</div>
+  <img class="screenshot" src="../../assets/images/setup-7.png" alt=""><p spellcheck="false">Claude Code asks you to pick a visual theme. Use your <strong>arrow keys</strong> to scroll — the preview at the bottom updates as you go.</p><p spellcheck="false">If your terminal has a dark background, choose <strong>Dark mode</strong>. If it is white or light gray, see the next slide.</p><div class="callout" spellcheck="false">You can change your theme any time by typing /theme inside Claude Code.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-6')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-8')">Next &#8594;</button><span class="progress">7 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-6')">← Back</button><button class="primary" onclick="showSlide('setup-8')">Next →</button><span class="progress">7 / 15</span></div>
 </div><div class="slide" id="slide-setup-8">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 8 of 15</div>
-  <h2>Light mode option</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 8 of 15</div>
+  <h2 spellcheck="false">Light mode option</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-8.png" alt=""><p>Here is Light mode — easier to read on a white or light terminal background. Pick whichever looks clearest and press Enter.</p><div class="callout">Dark mode = Monokai Extended. Light mode = GitHub syntax.</div>
+  <img class="screenshot" src="../../assets/images/setup-8.png" alt=""><p spellcheck="false">Here is Light mode — easier to read on a white or light terminal background. Pick whichever looks clearest and press Enter.</p><div class="callout" spellcheck="false">Dark mode = Monokai Extended. Light mode = GitHub syntax.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-7')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-9')">Next &#8594;</button><span class="progress">8 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-7')">← Back</button><button class="primary" onclick="showSlide('setup-9')">Next →</button><span class="progress">8 / 15</span></div>
 </div><div class="slide" id="slide-setup-9">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 9 of 15</div>
-  <h2>Terminal setup</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 9 of 15</div>
+  <h2 spellcheck="false">Terminal setup</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-9.png" alt=""><p>Claude Code asks if you want recommended terminal settings. This enables <strong>Option+Enter for newlines</strong> and a visual bell. Choose <strong>Yes, use recommended settings</strong>.</p><div class="callout">You can undo later with /terminal-setup.</div>
+  <img class="screenshot" src="../../assets/images/setup-9.png" alt=""><p spellcheck="false">Claude Code asks if you want recommended terminal settings. This enables <strong>Option+Enter for newlines</strong> and a visual bell. Choose <strong>Yes, use recommended settings</strong>.</p><div class="callout" spellcheck="false">You can undo later with /terminal-setup.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-8')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-10')">Next &#8594;</button><span class="progress">9 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-8')">← Back</button><button class="primary" onclick="showSlide('setup-10')">Next →</button><span class="progress">9 / 15</span></div>
 </div><div class="slide" id="slide-setup-10">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 10 of 15</div>
-  <h2>Trust this folder</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 10 of 15</div>
+  <h2 spellcheck="false">Trust this folder</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-10.png" alt=""><p>Claude Code asks if you trust the folder it is accessing. Since you are in your own home folder, choose <strong>Yes, I trust this folder</strong> and press Enter.</p><div class="callout">If you ever launch Claude Code in an unfamiliar folder, it is fine to say No and exit.</div>
+  <img class="screenshot" src="../../assets/images/setup-10.png" alt=""><p spellcheck="false">Claude Code asks if you trust the folder it is accessing. Since you are in your own home folder, choose <strong>Yes, I trust this folder</strong> and press Enter.</p><div class="callout" spellcheck="false">If you ever launch Claude Code in an unfamiliar folder, it is fine to say No and exit.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-9')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-11')">Next &#8594;</button><span class="progress">10 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-9')">← Back</button><button class="primary" onclick="showSlide('setup-11')">Next →</button><span class="progress">10 / 15</span></div>
 </div><div class="slide" id="slide-setup-11">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 11 of 15</div>
-  <h2>Fullscreen renderer</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 11 of 15</div>
+  <h2 spellcheck="false">Fullscreen renderer</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-11.png" alt=""><p>Claude Code may ask if you want to try the new fullscreen renderer — smoother output, mouse support, and text auto-copies when selected. Choose <strong>Yes, try it</strong>.</p><div class="callout">After this you will see the main Claude Code dashboard.</div>
+  <img class="screenshot" src="../../assets/images/setup-11.png" alt=""><p spellcheck="false">Claude Code may ask if you want to try the new fullscreen renderer — smoother output, mouse support, and text auto-copies when selected. Choose <strong>Yes, try it</strong>.</p><div class="callout" spellcheck="false">After this you will see the main Claude Code dashboard.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-10')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-12')">Next &#8594;</button><span class="progress">11 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-10')">← Back</button><button class="primary" onclick="showSlide('setup-12')">Next →</button><span class="progress">11 / 15</span></div>
 </div><div class="slide" id="slide-setup-12">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 12 of 15</div>
-  <h2>Permission popups</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 12 of 15</div>
+  <h2 spellcheck="false">Permission popups</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-12-1.png" alt=""><p>Your computer may show permission dialogs asking Claude Code to access different folders. Click <strong>Allow</strong> for anything you want it to work with. It is fine to click <strong>Don't Allow</strong> for anything you want to keep off-limits.</p><div class="callout">Photos has three options — unless you plan to work with your photo library, Don't Allow is fine.</div><div class="img-grid"><img class="grid-img" src="../../assets/images/setup-12-2.png" alt=""><img class="grid-img" src="../../assets/images/setup-12-3.png" alt=""><img class="grid-img" src="../../assets/images/setup-12-4.png" alt=""><img class="grid-img" src="../../assets/images/setup-12-5.png" alt=""></div>
+  <p spellcheck="false">Your computer may show permission dialogs asking Claude Code to access different folders. Click <strong>Allow</strong> for anything you want it to work with. It is fine to click <strong>Don't Allow</strong> for anything you want to keep off-limits.</p><div class="callout" spellcheck="false">Photos has three options — unless you plan to work with your photo library, Don't Allow is fine.</div><div class="carousel" data-idx="0"><button class="carousel-btn" onclick="carouselMove(this.closest('.carousel'),-1)">&#8249;</button><div class="carousel-frame"><img class="active" src="../../assets/images/setup-12-1.png" alt=""><img src="../../assets/images/setup-12-2.png" alt=""><img src="../../assets/images/setup-12-3.png" alt=""><img src="../../assets/images/setup-12-4.png" alt=""><img src="../../assets/images/setup-12-5.png" alt=""></div><button class="carousel-btn" onclick="carouselMove(this.closest('.carousel'),1)">&#8250;</button></div><div class="carousel-count">1 / 5</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-11')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-13')">Next &#8594;</button><span class="progress">12 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-11')">← Back</button><button class="primary" onclick="showSlide('setup-13')">Next →</button><span class="progress">12 / 15</span></div>
 </div><div class="slide" id="slide-setup-13">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 13 of 15</div>
-  <h2>The main interface</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 13 of 15</div>
+  <h2 spellcheck="false">The main interface</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-13.png" alt=""><p>You will land on the Claude Code home screen with your account info and a prompt at the bottom. The prompt is where you type. Try saying hi.</p><div class="callout">The left panel shows your account. The right panel shows tips and release notes.</div>
+  <img class="screenshot" src="../../assets/images/setup-13.png" alt=""><p spellcheck="false">You will land on the Claude Code home screen with your account info and a prompt at the bottom. The prompt is where you type. Try saying hi.</p><div class="callout" spellcheck="false">The left panel shows your account. The right panel shows tips and release notes.</div>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-12')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-14')">Next &#8594;</button><span class="progress">13 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-12')">← Back</button><button class="primary" onclick="showSlide('setup-14')">Next →</button><span class="progress">13 / 15</span></div>
 </div><div class="slide" id="slide-setup-14">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 14 of 15</div>
-  <h2>Claude is thinking</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 14 of 15</div>
+  <h2 spellcheck="false">Claude is thinking</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-14.png" alt=""><p>After you send a message, you will see <strong>Thinking...</strong> while Claude processes. Press <strong>Esc</strong> at any time to stop.</p>
+  <img class="screenshot" src="../../assets/images/setup-14.png" alt=""><p spellcheck="false">After you send a message, you will see <strong>Thinking...</strong> while Claude processes. Press <strong>Esc</strong> at any time to stop.</p>
   
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-13')">&#8592; Back</button><button class="primary" onclick="showSlide('setup-15')">Next &#8594;</button><span class="progress">14 / 15</span></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-13')">← Back</button><button class="primary" onclick="showSlide('setup-15')">Next →</button><span class="progress">14 / 15</span></div>
 </div><div class="slide" id="slide-setup-15">
-  <div class="eyebrow">&#9881; Claude Code Setup &nbsp;·&nbsp; Step 15 of 15</div>
-  <h2>Claude responds — you are ready!</h2>
+  <div class="eyebrow" spellcheck="false">⚙ Claude Code Setup &nbsp;·&nbsp; Step 15 of 15</div>
+  <h2 spellcheck="false">Claude responds — you are ready!</h2>
   <hr>
-  <img class="screenshot" src="../../assets/images/setup-15.png" alt=""><p>Claude responds right in your terminal. You are now fully set up.</p><p>From here you can ask it to help with files, write or review code, explain things, or work through any project.</p><div class="callout">Type ? to see available shortcuts, or just start asking Claude what you need.</div>
-  <div class="section-btns"><button class="section-btn" onclick="showSlide('mac-1')">&#63743; Mac Install</button><button class="section-btn" onclick="showSlide('win-1')">&#x229E; Windows Install</button></div>
-  <div class="nav"><button class="ghost" onclick="showSlide('setup-14')">&#8592; Back</button><span class="progress">15 / 15</span></div>
+  <img class="screenshot" src="../../assets/images/setup-15.png" alt=""><p spellcheck="false">Claude responds right in your terminal. You are now fully set up.</p><p spellcheck="false">From here you can ask it to help with files, write or review code, explain things, or work through any project.</p><div class="callout" spellcheck="false">Type ? to see available shortcuts, or just start asking Claude what you need.</div>
+  <div class="section-btns"><button class="section-btn" onclick="showSlide('mac-1')"> Mac Install</button><button class="section-btn" onclick="showSlide('win-1')">⊞ Windows Install</button></div>
+  <div class="nav"><button class="ghost" onclick="showSlide('setup-14')">← Back</button><span class="progress">15 / 15</span></div>
 </div>
 </div>
 <script src="../../assets/app.js"></script>
-</body>
-</html>
+
+</body></html>
