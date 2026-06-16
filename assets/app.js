@@ -61,6 +61,14 @@ let devFileHandle = null;
 function getCleanHTML() {
   const clone = document.documentElement.cloneNode(true);
   clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+  // Reset to initial state: hub slide active, all sections collapsed, no highlights
+  clone.querySelectorAll('.slide.active').forEach(el => el.classList.remove('active'));
+  const hub = clone.querySelector('#slide-hub');
+  if (hub) hub.classList.add('active');
+  clone.querySelectorAll('.toc-sub-list.open').forEach(el => el.classList.remove('open'));
+  clone.querySelectorAll('.toc-chevron.open').forEach(el => el.classList.remove('open'));
+  clone.querySelectorAll('.toc-sub-item.active').forEach(el => el.classList.remove('active'));
+  clone.querySelector('body').classList.remove('dev-mode');
   clone.querySelectorAll('.dev-panel').forEach(el => el.remove());
   clone.querySelector('body').classList.remove('dev-mode');
   return '<!DOCTYPE html>\n' + clone.outerHTML;
